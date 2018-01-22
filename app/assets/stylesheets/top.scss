@@ -1,0 +1,59 @@
+// Place all the styles related to the Top controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+    background:#f8f8f8;
+    position: relative;
+    margin: auto;
+    text-align:center;
+  }
+#contents{
+  background:#ffffff;
+  width: 1000px;
+  height: 900px;
+  margin: auto;
+
+}
+#shelf_out{
+  background:#c2b58f;
+  width: 800px;
+  height: 600px;
+  margin: auto;
+  position: relative;
+
+}
+
+#shelf_in{
+  background:#2e2818;
+  width: 600px;
+  height: 400px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: flex-end;
+}
+
+.books{
+  background:#ffffff;
+  border: solid #808000;
+  width: 100px;
+  height: 300px;
+  flex-flow: row nowrap ;
+  text-align:center;
+  writing-mode: vertical-rl;
+  line-height:100px; //縦書きテキストの中央揃え。widthと同じ値に。
+}
+
+
+#book_list{
+
+}
