@@ -8,11 +8,18 @@ body {
     margin: auto;
     text-align:center;
   }
+#container{
+  display: flex;
+  flex-direction:column;
+}
+
 #contents{
-  background:#ffffff;
+  background:#f8f8f8;
   width: 1000px;
-  height: 900px;
+  height: 700px;
   margin: auto;
+  display: flex;
+  flex-direction:row;
 
 }
 #shelf_out{
@@ -45,15 +52,45 @@ body {
 .books{
   background:#ffffff;
   border: solid #808000;
-  width: 100px;
+  width: 60px;
   height: 300px;
   flex-flow: row nowrap ;
   text-align:center;
   writing-mode: vertical-rl;
-  line-height:100px; //縦書きテキストの中央揃え。widthと同じ値に。
+  line-height:60px; //縦書きテキストの中央揃え。widthと同じ値に。
 }
 
 
 #book_list{
+  background:#ffffff;
+  width: 30%;
+  height: 600px;
+  margin: auto;
+}
+#book_list li{
+  border-bottom: 1px solid #f8f8f8;
+  list-style:none;
+}
 
+.bottom_box{
+
+}
+
+.square_btn{
+    text-align: center;
+    font-size: 14px;
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #bcc8d4;/*ボタン色*/
+    color: #FFF;
+    border-bottom: solid 4px #627295;
+    border-radius: 3px;
+}
+.square_btn::hover {/*ボタンを押したとき*/
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+    border-bottom: none;
 }

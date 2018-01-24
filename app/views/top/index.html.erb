@@ -1,18 +1,39 @@
 
+    <% book = ["お気に入りの本1",
+      "お気に入りの本2",
+      "お気に入りの本3"] %>
+
+    <% book_list = ["本の候補1",
+      "本の候補2",
+      "本の候補3"] %>
+
 <!--Top#index-->
 <h1>Bookshelf Poster</h1>
 <p>お気に入りの本を集めた自分だけの本棚を作ってポスターに</p>
-<div id = "contents">
-  <div id ="shelf_out">
-    <div id ="shelf_in">
-      <div class ="books">
-        <%=@book%>
+<div id ="container">
+  <div id = "contents">
+    <div id ="shelf_out">
+      <div id ="shelf_in">
+        <% book.each do|book| %>
+          <div class ="books">
+          <%= book%>
+          </div>
+        <% end %>
+        </div>
       </div>
-      <div class ="books">
-        <%=@book%>
-      </div>
+
+    <div id ="book_list">
+      <% book_list.each do|book_list| %>
+      <ul>
+        <li><%= book_list%></li>
+      </ul>
+      <% end %>
     </div>
   </div>
-  <div id ="book_list">
-  </div>
+
+    <div　id = "bottom_box">
+      <form action="/top/index" method="get">
+        <input class="square_btn" type ="submit" value="印刷する">
+      </form>
+    </div>
 </div>
